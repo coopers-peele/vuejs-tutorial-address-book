@@ -1,0 +1,8 @@
+{
+  "name": "vuejs-address-book-tutorial",
+  "version": "1.0.0",
+  "dependencies": {
+    "bootstrap": "^3.3",
+    "vue": "^2.1"
+  }
+}
