@@ -5,8 +5,23 @@ new Vue({
 	// Here we can register any values or collections that hold data
 	// for the application
 	data: {
-		contact: {},
-		contacts: []
+		contact: { surname: '', given_names:'', gender:'', dob:'' },
+		contacts: [
+			{
+				id: 1,
+				surname: 'Smith',
+				given_names: 'John',
+				gender: '1',
+				dob: '2045-09-10'
+			},
+			{
+				id: 1,
+				surname: 'Smith',
+				given_names: 'Mary',
+				gender: '0',
+				dob: '2046-08-05'
+			}
+		]
 	},
 
 	// Anything within the ready function will run when the application loads
@@ -15,11 +30,11 @@ new Vue({
 
 	// Methods we want to use in our application are registered here
 	methods: {
-		// Adds an contact to the existing contacts array
+		// Adds a contact to the existing contacts array
 		addContact: function() {
-			if (this.contact.name) {
+			if (this.contact.surname) {
 				this.contacts.push(this.contact);
-				this.contact = { name: '', description: '', date: '' };
+				this.contact = { surname: '', given_names: '', gender: '', dob: '' };
 			}
 		},
 

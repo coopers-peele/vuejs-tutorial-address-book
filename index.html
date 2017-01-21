@@ -62,8 +62,21 @@
             <h3>Address book</h3>
           </div>
 
-          <div class="panel-body">
-          </div>
+          <ul class="list-group">
+            <li class="list-group-item" v-for="(contact, index) in contacts">
+              <h4 class="list-group-item-heading">
+                </i>
+                  {{ contact.given_names }}&nbsp;{{ contact.surname }}
+              </h4>
+
+              <h5>
+                <i class="glyphicon glyphicon-calendar" v-if="contact.dob"></i>
+                  {{ contact.dob }}
+              </h5>
+
+              <button class="btn btn-xs btn-danger" v-on:click="deleteContact(index)">Delete</button>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
