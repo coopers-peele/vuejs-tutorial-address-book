@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Vue</title>
+  <title>Vue.js Address Book Tutorial</title>
 
   <!-- CSS -->
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
@@ -29,6 +29,28 @@
           </div>
 
           <div class="panel-body">
+            <div class="form-group">
+              <input class="form-control" placeholder="Given names" v-model="contact.given_names">
+            </div>
+
+            <div class="form-group">
+              <input class="form-control" placeholder="Surname" v-model="contact.surname">
+            </div>
+
+            <div class="form-group">
+              <label class="radio-inline">
+                <input type="radio" v-model="contact.gender" value="0"> Female
+              </label>
+              <label class="radio-inline">
+                <input type="radio" v-model="contact.gender" value="1"> Male
+              </label>
+            </div>
+
+            <div class="form-group">
+              <input type="date" class="form-control" placeholder="Date of birth" v-model="contact.dob">
+            </div>
+
+            <button class="btn btn-primary" v-on:click="addContact">Submit</button>
           </div>
         </div>
       </div>
